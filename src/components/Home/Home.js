@@ -2,11 +2,23 @@ import React from "react";
 import "./Home.css";
 
 const Home = () => {
+  /* Open the sidenav */
+  function openNav() {
+    document.getElementById("mySidenav").style.display = "none";
+    document.getElementById("menu_open").style.display = "block";
+    document.getElementById("main_cont").classList.remove("col-9");
+  }
+
+  /* Close/hide the sidenav */
+  function closeNav() {
+    document.getElementById("mySidenav").style.display = "block";
+    document.getElementById("menu_open").style.display = "none";
+    document.getElementById("main_cont").classList.add("col-9");
+  }
   return (
     <div className="text-light">
       <div className="row g-0">
-
-        <div className="col-3 menu">
+        <div id="mySidenav" className="col-3 menu">
           <div className="m-1">
             <img
               style={{ maxWidth: "80px" }}
@@ -14,26 +26,29 @@ const Home = () => {
               src="spen.jpg"
               alt=""
             />
-            <input type="checkbox" id="sort-menu"/>
-          <label for="sort-menu">
+            <label onClick={openNav} for="sort-menu">
               <i class="fas fa-times" id="menu-no"></i>
-              <img className="threeDot" src="menu.png" alt="" id="menu-yes"/>
-          </label>
-           
-
+              <img className="threeDot" src="menu.png" alt="" id="menu-yes" />
+            </label>
           </div>
           <ul className="list-group list-group-flush">
             <li className="p-3 border-bottom border-secondary">Home</li>
             <li className="p-3 border-bottom border-secondary">Play</li>
             <li className="p-3 border-bottom border-secondary">Deposit</li>
             <li className="p-3 border-bottom border-secondary">Withdraw</li>
-            <li className="p-3 border-bottom border-secondary">Provably Fair</li>
+            <li className="p-3 border-bottom border-secondary">
+              Provably Fair
+            </li>
             <li className="p-3 border-bottom border-secondary">FAQ</li>
           </ul>
         </div>
 
-        <div className="col-9">
+        <div id="main_cont" className="">
           <div className="container">
+            <label id="menu_open" onClick={closeNav} for="sort-menu">
+              <i class="fas fa-times" id="menu-no"></i>
+              <img className="threeDot2" src="menu.png" alt="" id="menu-yes" />
+            </label>
             <div>
               <p className="heading">Game result will be displayed here</p>
             </div>

@@ -129,6 +129,9 @@ body {
   font-size: 20px;
   margin-bottom: 10px; */
 }
+#mySidenav{
+  display: none;
+}
 /* menu css end */
 
 .c-dark{
@@ -150,6 +153,14 @@ body {
   width: 40px;
   position:absolute;
   right: 10px;
+  top: 10px;
+  cursor: pointer;
+}
+.threeDot2{
+  height: 40px;
+  width: 40px;
+  position:absolute;
+  left: 40px;
   top: 10px;
   cursor: pointer;
 }
