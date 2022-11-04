@@ -5,6 +5,7 @@ const Home = () => {
   return (
     <div className="text-light">
       <div className="row g-0">
+
         <div className="col-3 menu">
           <div className="m-1">
             <img
@@ -13,6 +14,13 @@ const Home = () => {
               src="spen.jpg"
               alt=""
             />
+            <input type="checkbox" id="sort-menu"/>
+          <label for="sort-menu">
+              <i class="fas fa-times" id="menu-no"></i>
+              <img className="threeDot" src="menu.png" alt="" id="menu-yes"/>
+          </label>
+           
+
           </div>
           <ul className="list-group list-group-flush">
             <li className="p-3 border-bottom border-secondary">Home</li>
@@ -23,6 +31,7 @@ const Home = () => {
             <li className="p-3 border-bottom border-secondary">FAQ</li>
           </ul>
         </div>
+
         <div className="col-9">
           <div className="container">
             <div>

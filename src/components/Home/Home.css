@@ -115,9 +115,11 @@ body {
 
 /* menu css start */
 .menu{
+  position: relative;
     border-right: 1.5px solid #3a3b43 !important;
     min-height: 100vh;
     color: white !important;
+    /* left: -100%; */
 }
 .position_menu{
   color: white;
@@ -142,4 +144,17 @@ body {
   position: relative;
   top: -20px;
   left: 8px;
+}
+.threeDot{
+  height: 40px;
+  width: 40px;
+  position:absolute;
+  right: 10px;
+  top: 10px;
+  cursor: pointer;
+}
+
+#sort-menu:checked ~ .menu{
+  background-color: red;
+  left: -100% !important;
 }
